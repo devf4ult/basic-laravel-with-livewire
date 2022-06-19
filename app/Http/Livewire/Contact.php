@@ -28,10 +28,9 @@ class Contact extends Component
     {
         $this->validate([
             'name' => 'required|min:5',
-            'email' => 'required'
-            // 'email' => 'required|email:rfc,dns'
+            'email' => 'required|email:rfc,dns'
         ]);
-        C::create([
+        Contacts::create([
             'name' => $this->name,
             'email' => $this->email
         ]);
