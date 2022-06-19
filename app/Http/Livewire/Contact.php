@@ -52,7 +52,7 @@ class Contact extends Component
             'email' => 'required|email:rfc,dns'
         ]);
         if ($this->selected_id) {
-            $record = C::find($this->selected_id);
+            $record = Contacts::find($this->selected_id);
             $record->update([
                 'name' => $this->name,
                 'email' => $this->email
